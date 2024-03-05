@@ -1,0 +1,72 @@
+nav {
+    top: 20px;
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    /*z-index: 1;*/
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px); 
+    background-color:rgb(4, 57, 90) ;
+    z-index: -1;
+}
+
+nav a{
+    color: whitesmoke;
+    font-family:Ojuju;
+    text-decoration: none;
+    position:relative;
+}
+a:after{
+    content : "";
+    height:1px;
+    background-color: whitesmoke;
+    width:0px;
+    position:absolute;
+    left:50%;
+    bottom:-10px;
+    transition: width 0.2s ease-out, left 0.3s ease-out; 
+    transform: translateX(-50%);
+}
+a:hover:after{
+    width:100%;
+}
+
+nav li{
+    display:inline-block;
+    padding: 15px;
+    
+}
+body{
+    background-image: url(tech/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Cinzel", serif;
+    font-weight: 200;
+    color:whitesmoke;
+    
+}
+@media (min-width:428px) and (max-width:727px){
+body{
+    background-image: url(tech/background-technology-tablet.jpg);
+}}
+@media (min-width:728px){
+body{
+    background-image: url(tech/background-technology-desktop.jpg);
+}}
+.grid-container{
+    display:grid;
+    margin-top: 18em;
+}
+.row .col-2{
+    text-align: right;
+}
